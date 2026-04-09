@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 20 | Wish Me</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="page-bg" aria-hidden="true"></div>
+
+    <div class="gh-hero">
+        <nav class="nav">
+            <div class="logo"><span class="first">CHAPTER</span>20</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Moments</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="wishme.html">Wish Me</a></li>
+            </ul>
+            <a class="btn-book" href="index.html">Back Home</a>
+        </nav>
+
+        <main class="page-content">
+            <h1 class="page-title">Send A <span class="gradient-text">Wish</span></h1>
+            <p class="page-note">
+                The wish section is now connected to Formspree. Fill in the message below and it will be sent straight from this page.
+            </p>
+
+            <section class="form-card">
+                <h2 class="gradient-text">Send Your Wish</h2>
+                <p>Write something beautiful for Paula and send it directly.</p>
+
+                <form class="form-grid" action="https://formspree.io/f/xqegvzkv" method="POST">
+                    <input type="text" id="senderName" name="name" placeholder="Your name" required>
+                    <input type="email" id="senderEmail" name="email" placeholder="Your email" required>
+                    <input type="text" id="wishSubject" name="subject" placeholder="Wish subject" value="Happy 20th Birthday Paula" required>
+                    <textarea id="wishMessage" name="message" placeholder="Write your message here..." required></textarea>
+                    <input type="hidden" name="_subject" value="New Paula Birthday Wish">
+                    <button class="btn-book" type="submit">Send Wish</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <div class="site-audio">
+        <span class="site-audio-label">Love Song</span>
+        <audio id="site-audio" src="love.mp3" controls autoplay loop preload="metadata"></audio>
+    </div>
+
+    <script src="site-audio.js"></script>
+</body>
+</html>
